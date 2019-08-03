@@ -1,0 +1,30 @@
+{
+  "name": "electron-testing-ava-template",
+  "version": "1.0.0",
+  "description": "Quickstart into Testing with Ava and Electron.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sebastian-Schuchmann/Electron-Testing-Ava-Template.git"
+  },
+  "keywords": [
+    "Electron",
+    "Testing",
+    "Ava"
+  ],
+  "author": "Sebastian Schuchmann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sebastian-Schuchmann/Electron-Testing-Ava-Template/issues"
+  },
+  "homepage": "https://github.com/Sebastian-Schuchmann/Electron-Testing-Ava-Template#readme",
+  "devDependencies": {
+    "ava": "^2.2.0",
+    "electron": "^5.0.0",
+    "spectron": "^7.0.0"
+  }
+}
