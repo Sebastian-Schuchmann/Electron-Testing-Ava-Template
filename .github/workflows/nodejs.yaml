@@ -6,14 +6,12 @@ on: [push]
 
 jobs:
   build:
-    name: build
     strategy:
       matrix:
         platform: [ubuntu-latest, macos-latest, windows-latest]
     runs-on: ${{ matrix.platform }}
     steps:
     - uses: actions/checkout@master
-    - name: Use Node.js 10.x
       uses: actions/setup-node@master
       with:
         version: 10.x
