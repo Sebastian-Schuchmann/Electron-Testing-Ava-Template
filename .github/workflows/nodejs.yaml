@@ -1,11 +1,10 @@
-on: [push]
+steon: [push]
 
 name: Node.js
 
 jobs:
-
-  build-ubuntu:
-    name: Build-Ubuntu
+  build_ubuntu:
+    name: build ubuntu
     runs-on: ubuntu-latest
     steps:
 
@@ -21,9 +20,8 @@ jobs:
         npm install
         npm run build --if-present
         npm test
-
-  build-mac:
-    name: Build-MacOS
+  build_mac:
+    name: build mac
     runs-on: macOS-latest
     steps:
 
@@ -39,9 +37,8 @@ jobs:
         npm install
         npm run build --if-present
         npm test
-    
-    build-win:
-    name: Build-Windows
+    build_win:
+    name: build win
     runs-on: windows-latest
     steps:
 
