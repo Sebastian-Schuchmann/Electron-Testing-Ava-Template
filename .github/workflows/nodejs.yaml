@@ -1,8 +1,8 @@
-on: [push]
-
 name: 'Electron Build and Test'
 description: 'It builds and tests an Electron App on all 3 Platforms'
 author: 'Sebastian Schuchmann'
+
+on: [push]
 
 jobs:
   build_ubuntu:
@@ -19,6 +19,7 @@ jobs:
         npm install
         npm run build --if-present
         npm test
+
   build_mac:
     name: build mac
     runs-on: macOS-latest
@@ -33,6 +34,7 @@ jobs:
         npm install
         npm run build --if-present
         npm test
+        
     build_win:
     name: build win
     runs-on: windows-latest
