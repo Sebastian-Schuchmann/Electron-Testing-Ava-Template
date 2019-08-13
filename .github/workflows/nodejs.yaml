@@ -5,39 +5,12 @@ author: 'Sebastian Schuchmann'
 on: [push]
 
 jobs:
-  build_ubuntu:
-    name: build ubuntu
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    - name: Use Node.js 10.x
-      uses: actions/setup-node@master
-      with:
-        version: 10.x
-    - name: npm install, build, and test
-      run: |
-        npm install
-        npm run build --if-present
-        npm test
-
-  build_mac:
-    name: build mac
-    runs-on: macOS-latest
-    steps:
-    - uses: actions/checkout@master
-    - name: Use Node.js 10.x
-      uses: actions/setup-node@master
-      with:
-        version: 10.x
-    - name: npm install, build, and test
-      run: |
-        npm install
-        npm run build --if-present
-        npm test
-        
-    build_win:
-    name: build win
-    runs-on: windows-latest
+  build:
+    name: build
+    strategy:
+      matrix:
+        platform: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.platform }}
     steps:
     - uses: actions/checkout@master
     - name: Use Node.js 10.x
