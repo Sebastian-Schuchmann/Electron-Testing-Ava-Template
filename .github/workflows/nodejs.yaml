@@ -1,6 +1,8 @@
 on: [push]
 
-name: Electron
+name: 'Electron Build and Test'
+description: 'It builds and tests an Electron App on all 3 Platforms'
+author: 'Sebastian Schuchmann'
 
 jobs:
   build_ubuntu:
