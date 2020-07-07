@@ -24,7 +24,7 @@
   "homepage": "https://github.com/Sebastian-Schuchmann/Electron-Testing-Ava-Template#readme",
   "devDependencies": {
     "ava": "^2.2.0",
-    "electron": "^5.0.0",
+    "electron": "^7.2.4",
     "spectron": "^7.0.0"
   }
 }
